@@ -4125,7 +4125,7 @@ const allQuestions = {
 // Definición de las credenciales predeterminadas
 const DEFAULT_CREDENTIALS = {
     username: "IBERIA",
-    password: "mySecurePassword123"  // Contraseña predeterminada (puedes cambiarla)
+    password: "DNTpregunasIB2025"  // Contraseña predeterminada (puedes cambiarla)
 };
 
 // Función para calcular un hash básico de la contraseña ingresada
