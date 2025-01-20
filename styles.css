@@ -16,6 +16,185 @@ header {
 	text-align: center;
 }
 
+
+/* ------------------------------------------
+/* Codigo para el formulario de autenticacion
+/* ------------------------------------------
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc; /* Fondo de pantalla gris claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total de la ventana */
+    overflow: hidden; /* Evita el desplazamiento de la pantalla */
+}
+
+/* Contenedor principal de la autenticación */
+#auth-container {
+    width: 100%;
+    max-width: 380px; /* Máxima anchura para PC */
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center;
+    box-sizing: border-box;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Título y subtítulo */
+#auth-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#auth-container p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Estilo para el botón de inicio de sesión */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Mensajes de error o éxito */
+#message {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #f44336; /* Rojo para error */
+    font-weight: bold;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos responsive para móviles */
+@media (max-width: 600px) {
+    body {
+        background-color: #e9eff7; /* Fondo suave para móviles */
+    }
+
+    #auth-container {
+        padding: 30px;
+        max-width: 90%; /* Más ancho para móviles */
+    }
+
+    #auth-container h2 {
+        font-size: 1.6rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+/* ----------------- FIN ---------------------------
+
+
+/* -------------------------------------------------
+/* Codigo para el ojo de mostrar contraseña --------
+/* -------------------------------------------------
+
+/* Contenedor de la contraseña con el ojo */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+#password {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+#password:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Icono de ojo */
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+#togglePassword:hover {
+    color: #0056b3;
+}
+
+
+
+/* ---------------- FIN ----------------------------
+
 #inicio-container {
   width: 90%;
   max-width: 700px;

@@ -4118,15 +4118,14 @@ const allQuestions = {
 };
 
 
-// Manejamos el login con usuario y pass
-
+/// Manejamos el login con usuario y pass
 
 // Importante: Este ejemplo es educativo. En producción, realiza la autenticación en el servidor.
 
 // Almacena un hash de la contraseña en lugar de la contraseña en texto plano.
 const DEFAULT_CREDENTIALS = {
     username: "admin",
-    passwordHash: "00f996c3bef5ada16e2b4b9af80b0457" // MD5 de "12345" (solo como ejemplo, usa SHA-256 o bcrypt en producción)
+    passwordHash: "3d6cd6df5e6e71bc3755f80b9d098d42" // MD5 de "@DNTpregun-----" (solo como ejemplo, usa SHA-256 o bcrypt en producción)
 };
 
 // Función para calcular un hash MD5 (usando un algoritmo más robusto en un entorno real).
@@ -4150,14 +4149,27 @@ document.getElementById("loginForm").addEventListener("submit", async function (
 
     if (usernameInput === DEFAULT_CREDENTIALS.username && inputPasswordHash === DEFAULT_CREDENTIALS.passwordHash) {
         // Autenticación exitosa
-        document.getElementById("message").style.color = "green";
-        document.getElementById("message").textContent = "¡Inicio de sesión exitoso!";
+        document.getElementById("login-message").style.color = "green";
+        document.getElementById("login-message").textContent = "¡Inicio de sesión exitoso!";
+        document.getElementById("quiz-content").style.display = "block"; // Mostrar contenido del quiz
+        document.getElementById("login-container").style.display = "none"; // Ocultar formulario de login
     } else {
         // Autenticación fallida
-        document.getElementById("message").style.color = "red";
-        document.getElementById("message").textContent = "Usuario o contraseña incorrectos.";
+        document.getElementById("login-message").style.color = "red";
+        document.getElementById("login-message").textContent = "Usuario o contraseña incorrectos.";
     }
 });
+
+// Funcionalidad para mostrar/ocultar la contraseña
+document.getElementById("togglePassword").addEventListener("click", function (e) {
+    const passwordField = document.getElementById("password");
+    const type = passwordField.type === "password" ? "text" : "password";
+    passwordField.type = type;
+
+    // Cambiar icono de ojo
+    this.classList.toggle("fa-eye-slash");
+});
+
 
 
 
