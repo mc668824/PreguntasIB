@@ -4117,6 +4117,52 @@ const allQuestions = {
 
 };
 
+
+// Manejamos el login con usuario y pass
+
+
+// Importante: Este ejemplo es educativo. En producción, realiza la autenticación en el servidor.
+
+// Almacena un hash de la contraseña en lugar de la contraseña en texto plano.
+const DEFAULT_CREDENTIALS = {
+    username: "admin",
+    passwordHash: "00f996c3bef5ada16e2b4b9af80b0457" // MD5 de "12345" (solo como ejemplo, usa SHA-256 o bcrypt en producción)
+};
+
+// Función para calcular un hash MD5 (usando un algoritmo más robusto en un entorno real).
+function hashMD5(string) {
+    return crypto.subtle.digest("MD5", new TextEncoder().encode(string)).then(buffer => {
+        return Array.from(new Uint8Array(buffer))
+            .map(byte => byte.toString(16).padStart(2, "0"))
+            .join("");
+    });
+}
+
+// Manejar el envío del formulario.
+document.getElementById("loginForm").addEventListener("submit", async function (event) {
+    event.preventDefault(); // Evita el envío del formulario por defecto
+
+    const usernameInput = document.getElementById("username").value.trim();
+    const passwordInput = document.getElementById("password").value;
+
+    // Hash de la contraseña ingresada.
+    const inputPasswordHash = await hashMD5(passwordInput);
+
+    if (usernameInput === DEFAULT_CREDENTIALS.username && inputPasswordHash === DEFAULT_CREDENTIALS.passwordHash) {
+        // Autenticación exitosa
+        document.getElementById("message").style.color = "green";
+        document.getElementById("message").textContent = "¡Inicio de sesión exitoso!";
+    } else {
+        // Autenticación fallida
+        document.getElementById("message").style.color = "red";
+        document.getElementById("message").textContent = "Usuario o contraseña incorrectos.";
+    }
+});
+
+
+
+
+
 let currentBattery = null;
 let currentQuestionIndex = 0; // Índice de la pregunta actual
 let score = 0; // Puntuación del usuario
