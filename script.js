@@ -4120,22 +4120,60 @@ const allQuestions = {
 
 /// Manejamos el login con usuario y pass
 
-// Importante: Este ejemplo es educativo. En producción, realiza la autenticación en el servidor.
-
 // Almacena un hash de la contraseña en lugar de la contraseña en texto plano.
 const DEFAULT_CREDENTIALS = {
-    username: "admin",
-    passwordHash: "3d6cd6df5e6e71bc3755f80b9d098d42" // MD5 de "@DNTpregun-----" (solo como ejemplo, usa SHA-256 o bcrypt en producción)
+    username: "IBERIA",
+    passwordHash: "0DCA453C607DC46AB50C55368BD8D41AFFC8AC97E6FFDCA6D9AE12E3B774A4B5" // SHA-256 de "@DNTpregun-----"
 };
 
-// Función para calcular un hash MD5 (usando un algoritmo más robusto en un entorno real).
-function hashMD5(string) {
-    return crypto.subtle.digest("MD5", new TextEncoder().encode(string)).then(buffer => {
-        return Array.from(new Uint8Array(buffer))
-            .map(byte => byte.toString(16).padStart(2, "0"))
-            .join("");
-    });
+// Función para calcular un hash SHA-256.
+async function hashSHA256(string) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(string);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", data); // Crear el hash
+    const hashArray = Array.from(new Uint8Array(hashBuffer)); // Convertir el buffer a array de bytes
+    const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, "0")).join(""); // Convertir cada byte a su representación hexadecimal
+    return hashHex;
 }
+
+// Manejar el envío del formulario.
+document.getElementById("loginForm").addEventListener("submit", async function (event) {
+    event.preventDefault(); // Evita el envío del formulario por defecto
+
+    const usernameInput = document.getElementById("username").value.trim();
+    const passwordInput = document.getElementById("password").value;
+
+    // Hash de la contraseña ingresada.
+    const inputPasswordHash = await hashSHA256(passwordInput);
+
+    // Verificamos si el nombre de usuario y la contraseña coinciden.
+    if (usernameInput === DEFAULT_CREDENTIALS.username && inputPasswordHash === DEFAULT_CREDENTIALS.passwordHash) {
+        // Autenticación exitosa
+        document.getElementById("login-message").style.color = "green";
+        document.getElementById("login-message").textContent = "¡Inicio de sesión exitoso!";
+        
+        // Mostrar el contenido del quiz
+        document.getElementById("quiz-content").style.display = "block";
+        
+        // Ocultar el formulario de login
+        document.getElementById("login-container").style.display = "none"; 
+    } else {
+        // Autenticación fallida
+        document.getElementById("login-message").style.color = "red";
+        document.getElementById("login-message").textContent = "Usuario o contraseña incorrectos.";
+    }
+});
+
+// Funcionalidad para mostrar/ocultar la contraseña
+document.getElementById("togglePassword").addEventListener("click", function (e) {
+    const passwordField = document.getElementById("password");
+    const type = passwordField.type === "password" ? "text" : "password";
+    passwordField.type = type;
+
+    // Cambiar icono de ojo
+    this.classList.toggle("fa-eye-slash");
+});
+
 
 // Manejar el envío del formulario.
 document.getElementById("loginForm").addEventListener("submit", async function (event) {
