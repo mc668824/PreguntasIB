@@ -4123,7 +4123,7 @@ const allQuestions = {
 // Almacena un hash de la contraseña en lugar de la contraseña en texto plano.
 const DEFAULT_CREDENTIALS = {
     username: "IBERIA",
-    passwordHash: "0DCA453C607DC46AB50C55368BD8D41AFFC8AC97E6FFDCA6D9AE12E3B774A4B5" // SHA-256 de "@DNTpregun-----"
+    passwordHash: "C51987A2E8A980C5B7612C2E090F2DD7D3D28D10797A05798BB3EE2FCEADB83D" // SHA-256 de "DNTpregun-----"
 };
 
 // Función para calcular un hash SHA-256.
