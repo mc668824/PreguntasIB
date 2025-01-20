@@ -4121,92 +4121,46 @@ const allQuestions = {
 /// Manejamos el login con usuario y pass
 
 // Almacena un hash de la contraseña en lugar de la contraseña en texto plano.
+// Definición de las credenciales predeterminadas
 const DEFAULT_CREDENTIALS = {
     username: "IBERIA",
-    passwordHash: "C51987A2E8A980C5B7612C2E090F2DD7D3D28D10797A05798BB3EE2FCEADB83D" // SHA-256 de "DNTpregun-----"
+    password: "DNTpreguntasib2025"  // Contraseña predeterminada
 };
 
-// Función para calcular un hash SHA-256.
-async function hashSHA256(string) {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(string);
-    const hashBuffer = await crypto.subtle.digest("SHA-256", data); // Crear el hash
-    const hashArray = Array.from(new Uint8Array(hashBuffer)); // Convertir el buffer a array de bytes
-    const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, "0")).join(""); // Convertir cada byte a su representación hexadecimal
-    return hashHex;
+// Función para calcular un hash básico de la contraseña ingresada
+// (Este hash no es seguro, es solo para evitar mostrar la contraseña directamente)
+function hashPassword(password) {
+    let hash = 0;
+    for (let i = 0; i < password.length; i++) {
+        hash = ((hash << 5) - hash) + password.charCodeAt(i);
+        hash |= 0; // Forzar conversión a 32 bits
+    }
+    return hash.toString(16); // Devuelve el hash como hexadecimal
 }
 
-// Manejar el envío del formulario.
-document.getElementById("loginForm").addEventListener("submit", async function (event) {
-    event.preventDefault(); // Evita el envío del formulario por defecto
+// Manejo de la autenticación
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
 
     const usernameInput = document.getElementById("username").value.trim();
     const passwordInput = document.getElementById("password").value;
 
-    // Hash de la contraseña ingresada.
-    const inputPasswordHash = await hashSHA256(passwordInput);
-
-    // Verificamos si el nombre de usuario y la contraseña coinciden.
-    if (usernameInput === DEFAULT_CREDENTIALS.username && inputPasswordHash === DEFAULT_CREDENTIALS.passwordHash) {
-        // Autenticación exitosa
+    // Comprobamos que el nombre de usuario y la contraseña sean correctos
+    if (usernameInput === DEFAULT_CREDENTIALS.username && hashPassword(passwordInput) === hashPassword(DEFAULT_CREDENTIALS.password)) {
+        // Si la autenticación es exitosa
         document.getElementById("login-message").style.color = "green";
         document.getElementById("login-message").textContent = "¡Inicio de sesión exitoso!";
-        
-        // Mostrar el contenido del quiz
+
+        // Mostrar el contenido del quiz y ocultar el formulario
         document.getElementById("quiz-content").style.display = "block";
-        
-        // Ocultar el formulario de login
-        document.getElementById("login-container").style.display = "none"; 
+        document.getElementById("login-container").style.display = "none";
     } else {
-        // Autenticación fallida
+        // Si las credenciales no coinciden
         document.getElementById("login-message").style.color = "red";
         document.getElementById("login-message").textContent = "Usuario o contraseña incorrectos.";
     }
 });
 
-// Funcionalidad para mostrar/ocultar la contraseña
-document.getElementById("togglePassword").addEventListener("click", function (e) {
-    const passwordField = document.getElementById("password");
-    const type = passwordField.type === "password" ? "text" : "password";
-    passwordField.type = type;
-
-    // Cambiar icono de ojo
-    this.classList.toggle("fa-eye-slash");
-});
-
-
-// Manejar el envío del formulario.
-document.getElementById("loginForm").addEventListener("submit", async function (event) {
-    event.preventDefault(); // Evita el envío del formulario por defecto
-
-    const usernameInput = document.getElementById("username").value.trim();
-    const passwordInput = document.getElementById("password").value;
-
-    // Hash de la contraseña ingresada.
-    const inputPasswordHash = await hashMD5(passwordInput);
-
-    if (usernameInput === DEFAULT_CREDENTIALS.username && inputPasswordHash === DEFAULT_CREDENTIALS.passwordHash) {
-        // Autenticación exitosa
-        document.getElementById("login-message").style.color = "green";
-        document.getElementById("login-message").textContent = "¡Inicio de sesión exitoso!";
-        document.getElementById("quiz-content").style.display = "block"; // Mostrar contenido del quiz
-        document.getElementById("login-container").style.display = "none"; // Ocultar formulario de login
-    } else {
-        // Autenticación fallida
-        document.getElementById("login-message").style.color = "red";
-        document.getElementById("login-message").textContent = "Usuario o contraseña incorrectos.";
-    }
-});
-
-// Funcionalidad para mostrar/ocultar la contraseña
-document.getElementById("togglePassword").addEventListener("click", function (e) {
-    const passwordField = document.getElementById("password");
-    const type = passwordField.type === "password" ? "text" : "password";
-    passwordField.type = type;
-
-    // Cambiar icono de ojo
-    this.classList.toggle("fa-eye-slash");
-});
 
 
 
