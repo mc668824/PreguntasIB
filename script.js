@@ -4117,58 +4117,6 @@ const allQuestions = {
 
 };
 
-
-/// Manejamos el login con usuario y pass
-
-// Almacena un hash de la contraseña en lugar de la contraseña en texto plano.
-// Definición de las credenciales predeterminadas
-// Definición de las credenciales predeterminadas
-const DEFAULT_CREDENTIALS = {
-    username: "IBERIA",
-    password: "DNTpreguntasIB2025"  // Contraseña predeterminada (puedes cambiarla)
-};
-
-// Función para calcular un hash básico de la contraseña ingresada
-// (Este hash no es seguro, es solo para evitar mostrar la contraseña directamente)
-function hashPassword(password) {
-    let hash = 0;
-    for (let i = 0; i < password.length; i++) {
-        hash = ((hash << 5) - hash) + password.charCodeAt(i);
-        hash |= 0; // Forzar conversión a 32 bits
-    }
-    return hash.toString(16); // Devuelve el hash como hexadecimal
-}
-
-// Manejo de la autenticación
-document.getElementById("loginForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
-
-    const usernameInput = document.getElementById("username").value.trim();
-    const passwordInput = document.getElementById("password").value;
-
-    // Comprobamos que el nombre de usuario y la contraseña sean correctos
-    if (usernameInput === DEFAULT_CREDENTIALS.username && hashPassword(passwordInput) === hashPassword(DEFAULT_CREDENTIALS.password)) {
-        // Si la autenticación es exitosa
-        document.getElementById("login-message").style.color = "green";
-        document.getElementById("login-message").textContent = "¡Inicio de sesión exitoso!";
-
-        // Mostrar el contenido del quiz y ocultar el formulario
-        document.getElementById("quiz-content").style.display = "block";
-        document.getElementById("login-container").style.display = "none";
-    } else {
-        // Si las credenciales no coinciden
-        document.getElementById("login-message").style.color = "red";
-        document.getElementById("login-message").textContent = "Usuario o contraseña incorrectos.";
-    }
-});
-
-
-
-
-
-
-
-
 let currentBattery = null;
 let currentQuestionIndex = 0; // Índice de la pregunta actual
 let score = 0; // Puntuación del usuario
