@@ -135,9 +135,9 @@ footer {
     }
 	
 	#login-container {
-        width: auto !important; /* Ajusta el ancho para pantallas pequeñas */
-        height: auto !important; /* Ajusta la altura para que se adapte al contenido */
-        margin: 20px auto !important; /* Centra horizontalmente */
+        width: auto !important;
+   	height: 100vh !important;
+    	margin: 0 auto !important;
     }
 }
 
