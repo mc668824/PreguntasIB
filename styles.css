@@ -3,222 +3,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Color de fondo general */
+    background-color: #f4f4f4; /* Fondo gris claro */
 }
 
 header {
-    background-color: #333; /* Color de fondo del encabezado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
     color: white;
     padding: 20px;
-    text-align: center;
-}
-.h2-subtitle {
-	text-align: center;
-}
-
-
-/* ------------------------------------------
-/* Codigo para el formulario de autenticacion
-/* ------------------------------------------
-
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fc; /* Fondo de pantalla gris claro */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Altura total de la ventana */
-    overflow: hidden; /* Evita el desplazamiento de la pantalla */
-}
-
-/* Contenedor principal de la autenticación */
-#auth-container {
-    width: 100%;
-    max-width: 380px; /* Máxima anchura para PC */
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    text-align: center;
-    box-sizing: border-box;
-    animation: fadeIn 0.6s ease-out;
-}
-
-/* Título y subtítulo */
-#auth-container h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-#auth-container p {
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 30px;
-}
-
-/* Estilos para los campos de entrada */
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 15px;
-    margin: 12px 0;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 1rem;
-    background-color: #f9f9f9;
-    color: #333;
-    box-sizing: border-box;
-    transition: border 0.3s ease;
-}
-
-input[type="text"]:focus, input[type="password"]:focus {
-    border-color: #007bff;
-    background-color: #fff;
-    outline: none;
-}
-
-/* Estilo para el botón de inicio de sesión */
-button {
-    width: 100%;
-    padding: 15px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-button:active {
-    transform: scale(1);
-}
-
-/* Mensajes de error o éxito */
-#message {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #f44336; /* Rojo para error */
-    font-weight: bold;
-}
-
-/* Animación de entrada */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Estilos responsive para móviles */
-@media (max-width: 600px) {
-    body {
-        background-color: #e9eff7; /* Fondo suave para móviles */
-    }
-
-    #auth-container {
-        padding: 30px;
-        max-width: 90%; /* Más ancho para móviles */
-    }
-
-    #auth-container h2 {
-        font-size: 1.6rem;
-    }
-
-    button {
-        font-size: 1rem;
-    }
-}
-
-/* ----------------- FIN ---------------------------
-
-
-/* -------------------------------------------------
-/* Codigo para el ojo de mostrar contraseña --------
-/* -------------------------------------------------
-
-/* Contenedor de la contraseña con el ojo */
-.password-container {
-    position: relative;
-    width: 100%;
-}
-
-#password {
-    width: 100%;
-    padding: 15px;
-    margin: 12px 0;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 1rem;
-    background-color: #f9f9f9;
-    color: #333;
-    box-sizing: border-box;
-    transition: border 0.3s ease;
-}
-
-#password:focus {
-    border-color: #007bff;
-    background-color: #fff;
-    outline: none;
-}
-
-/* Icono de ojo */
-#togglePassword {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #007bff;
-    transition: color 0.3s ease;
-}
-
-#togglePassword:hover {
-    color: #0056b3;
-}
-
-
-
-/* ---------------- FIN ----------------------------
-
-#inicio-container {
-  width: 90%;
-  max-width: 700px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #logo {
-    width: 80px; /* Ajusta el tamaño del logo para móviles */
-    max-width: 100%; /* Asegura que el logo no se desborde */
+    width: 80px;
+    max-width: 100%;
 }
-#startButton {
-	padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
+
+#title {
+    font-size: 2rem;
+    margin: 10px 0;
 }
-/* Estilos del menú */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -227,208 +33,180 @@ button:active {
     padding: 10px;
 }
 
-.dropdown {
-    position: relative; /* Para el menú desplegable */
-    display: inline-block; /* Mostrar en línea */
-}
-
-.dropbtn {
-    background-color: #464646; /* Color de fondo del botón */
-    color: white;
-    padding: 10px 16px;
-    font-size: 16px;
-    border: 1px solid white;
-    cursor: pointer; 
-    display: flex; /* Para alinear ícono y texto */
-    align-items: center;
-    opacity: 0.8;
-}
-
-.dropbtn i {
-    margin-right: 5px; /* Espacio entre el ícono y el texto */
-}
-
-.dropdown-content {
-    display: none; /* Ocultar por defecto */
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1; /* Asegurar que el menú esté por encima */
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1; /* Color de fondo al pasar el mouse */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block; /* Mostrar el menú al pasar el mouse */
-}
-
-#exitButton {
-    background: none; 
-    border: none; 
-    cursor: pointer; 
-    color: white; 
-    font-size: 20px; 
-}
-
-#options.opciones_options {
-    text-align: center;
-}
-.boton_reinicio {
-	font-family: 'Dancing Script', serif;
-    width: 88%;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #4CAF50;
-    color: white;
+button {
     padding: 10px 20px;
+    background: #007bff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 2em;
+    transition: background 0.3s;
 }
 
-.boton_reinicio:hover {
-    background-color: #981717; /* Color de fondo al pasar el ratón */
+button:hover {
+    background: #0056b3;
 }
 
-/* Contenedor principal del quiz y sus elementos */
-#quiz-container {
-    width: 90%;
+/* Contenedores principales */
+#inicio-container, #quiz-container {
     max-width: 700px;
-    margin: 20px auto; /* Centra el contenedor */
-    padding: 20px; /* Espaciado interno */
-    background: #fff; /* Fondo blanco */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.icono-informativo {
-    color: #007bff;  /* Color azul */
-    margin-right: 5px; /* Espaciado a la derecha */
-}
-
+/* Texto de mejoras */
 .text-mejoras {
-	font-size: 0.8em;
+    font-size: 0.9em;
+    margin: 10px 0;
+    text-align: center;
 }
-/* Estilo para el título de la pregunta */
-.question {
-    font-size: 1rem;
-	color: #333;
-	margin-bottom: 20px;
-	text-align: center;
-	font-weight: normal;
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    color: #777;
 }
-.quiz-subtitle {
-	width: 90%; /* O cualquier ancho deseado, como 800px */
-    max-width: 700px; /* Limitar ancho máximo */
-    margin: 20px auto; /* Centrar horizontalmente */
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Centrar texto dentro del contenedor */
-    background-color: #fff; /* Fondo blanco */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(218, 23, 23, 0.50); /* Sombra ligera */
+
+/* Responsividad */
+@media (max-width: 600px) {
+    #title {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    #inicio-container, #quiz-container {
+        padding: 15px;
+    }
 }
+
+/* Estilo para los títulos del quiz */
+.question, .quiz-subtitle {
+    text-align: center;
+    margin: 20px 0;
+}
+
 /* Estilo para las opciones */
 .option {
     display: block;
-    width: 90%; 
+    width: 90%;
     margin: 10px auto;
-    padding: 20px;
+    padding: 15px;
     background: #bb2424;
     color: #fff;
-    font-weight: 500;
-    border: 1px solid black;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s, box-shadow 0.3s;
+    transition: background 0.3s;
 }
 
 .option:hover {
-    background: #0984e3; 
+    background: #0984e3;
 }
 
-.correct {
-    background: #27ae60; 
-    border: 1px solid #1e8449; 
-}
-
-.incorrect {
-    background: #000; 
-    border: 1px solid black;
-}
-
-/* Estilo para el pie de página */
-footer {
-    text-align: center; /* Centra texto en el pie de página */
-    margin-top: 20px; /* Espacio superior */
-    padding: 10px; /* Espacio alrededor */
-    color: #777; /* Color de texto del pie de página */
-}
-
-/* Copyright */
-.copyright {
-    font-size: 0.7em;
-    margin-top: 10px; /* Espaciado superior */
-}
-
-/* Estilos para los botones de navegación */
+/* Botones de navegación */
 #navigation {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 56%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 #prev-button, #next-button {
-    padding: 10px 20px; /* Espaciado interno */
-    background: #007bff; /* Color de fondo del botón */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambio de cursor al pasar */
-    transition: background 0.3s; /* Transición suave para el color de fondo */
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 #prev-button:hover, #next-button:hover {
-    background: #0056b3; /* Color más oscuro al pasar el mouse */
+    background: #0056b3;
 }
 
-#prev-button:disabled, #next-button:disabled {
-    background: #bdc3c7; /* Color gris claro para botones deshabilitados */
-    cursor: not-allowed; /* Cambio de cursor para indicar que no se puede hacer clic */
-}
+/* Estilo para el feedback */
 .feedback {
-	width: 100%;
-	text-align: center;
-	color: #007bff;
+    width: 100%;
+    text-align: center;
+    color: #007bff;
 }
 
-/* Media Queries para mejorar la visualización en dispositivos móviles */
-@media (max-width: 600px) {
-    :root {
-        --font-size-title: 1.5rem;
-        --font-size-button: 14px;
-        --padding-button: 8px;
-    }
+/* Nuevo diseño para la página de inicio de sesión */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+}
 
-    #title {
-        font-size: var(--font-size-title);
-    }
+.login-container h1 {
+    color: #ff0000;
+    margin-bottom: 20px;
+}
 
-    .dropbtn {
-        font-size: var(--font-size-button);
-        padding: var(--padding-button);
-    }
+.login-container p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-form button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #cc0000;
+}
+
+.forgot-password {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.forgot-password a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
 }
