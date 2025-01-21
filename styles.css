@@ -191,6 +191,7 @@ footer {
 
 /* Estilos para la página de inicio de sesión */
 .login-container {
+	width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -200,12 +201,15 @@ footer {
     border: 2px solid #ff0000; /* Agregar un marco rojo */
     border-radius: 10px; /* Bordes redondeados para el marco */
     padding: 20px; /* Espaciado interno */
+	margin: 0 auto;
+	padding: 30px;
 }
 
 .login-container h1 {
     color: #ff0000;
     margin-bottom: 20px;
     font-size: 2rem; /* Tamaño de fuente más grande para el título */
+	text-align: center;
 }
 
 .login-container p {
@@ -215,15 +219,16 @@ footer {
     text-align: center;
 }
 
-.login-form {
+/* Estilos para el formulario de inicio de sesión */
+#loginForm { /* Corrige el selector aquí */
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-form input[type="text"],
-.login-form input[type="password"] {
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -232,7 +237,7 @@ footer {
     font-size: 1rem;
 }
 
-.login-form button {
+#loginForm button {
     background-color: #ff0000;
     color: #fff;
     padding: 10px 20px;
@@ -243,7 +248,7 @@ footer {
     transition: background-color 0.3s;
 }
 
-.login-form button:hover {
+#loginForm button:hover {
     background-color: #cc0000;
 }
 
