@@ -189,7 +189,7 @@ footer {
     color: #007bff;
 }
 
-/* Nuevo diseño para la página de inicio de sesión */
+/* Estilos para la página de inicio de sesión */
 .login-container {
     display: flex;
     flex-direction: column;
@@ -197,11 +197,15 @@ footer {
     justify-content: center;
     height: 100vh;
     background-color: #fff;
+    border: 2px solid #ff0000; /* Agregar un marco rojo */
+    border-radius: 10px; /* Bordes redondeados para el marco */
+    padding: 20px; /* Espaciado interno */
 }
 
 .login-container h1 {
     color: #ff0000;
     margin-bottom: 20px;
+    font-size: 2rem; /* Tamaño de fuente más grande para el título */
 }
 
 .login-container p {
@@ -247,6 +251,7 @@ footer {
     margin-top: 15px;
     font-size: 0.9rem;
     color: #888;
+    text-align: center; /* Centrar el texto */
 }
 
 .forgot-password a {
