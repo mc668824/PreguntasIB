@@ -135,19 +135,10 @@ footer {
     }
 	
 	#login-container {
-		width: 92%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		height: 100vh;
-		background-color: #fff;
-		border: 2px solid #ff0000;
-		border-radius: 10px;
-		padding: 20px;
-		margin: 0 auto;
-		padding: 30px;
-	}
+        width: auto !important; /* Ajusta el ancho para pantallas pequeñas */
+        height: auto !important; /* Ajusta la altura para que se adapte al contenido */
+        margin: 20px auto !important; /* Centra horizontalmente */
+    }
 }
 
 /* Estilo para los títulos del quiz */
@@ -206,25 +197,24 @@ footer {
 
 /* Estilos para la página de inicio de sesión */
 #login-container {
-	width: 50%;
-	display: flex;
+    width: 50%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 65vh;
     background-color: #fff;
-    border: 2px solid #ff0000; /* Agregar un marco rojo */
-    border-radius: 10px; /* Bordes redondeados para el marco */
-    padding: 20px; /* Espaciado interno */
-	margin: 40px auto;
-	padding: 30px;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px auto;
 }
 
 #login-container h1 {
     color: #ff0000;
     margin-bottom: 20px;
-    font-size: 2rem; /* Tamaño de fuente más grande para el título */
-	text-align: center;
+    font-size: 2rem;
+    text-align: center;
 }
 
 #login-container p {
@@ -235,7 +225,7 @@ footer {
 }
 
 /* Estilos para el formulario de inicio de sesión */
-#loginForm { /* Corrige el selector aquí */
+#loginForm {
     background-color: #fff;
     padding: 2% 15%;
     border-radius: 10px;
@@ -271,7 +261,7 @@ footer {
     margin-top: 15px;
     font-size: 0.9rem;
     color: #888;
-    text-align: center; /* Centrar el texto */
+    text-align: center;
 }
 
 .forgot-password a {
