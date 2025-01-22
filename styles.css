@@ -21,8 +21,13 @@ header {
 }
 
 #title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 10px 0;
+    color: #898989;
+}
+#subtitle {
+	color: #5c3c3c;
+    font-size: 0.8rem;
 }
 /* Boton de Menu desplegable */
 .navbar {
@@ -34,6 +39,7 @@ header {
 }
 
 button {
+	width: auto;
     padding: 10px 20px;
     background: #007bff;
     color: white;
@@ -50,6 +56,7 @@ button:hover {
 .dropdown {
     position: relative;
     display: inline-block;
+	font-size: 0.7rem;
 }
 
 .dropbtn {
@@ -108,7 +115,7 @@ button:hover {
 .text-mejoras {
     font-size: 0.9em;
     margin: 10px 0;
-    text-align: center;
+    text-align: left;
 }
 
 /* Pie de página */
@@ -126,7 +133,6 @@ footer {
     }
 
     button {
-        width: 90% !important;
         font-size: 1em;
     }
 
@@ -135,9 +141,9 @@ footer {
     }
 	
 	#login-container {
-        width: auto !important;
-   	height: 100vh !important;
-    	margin: 0 auto !important;
+		width: auto !important;
+		height: 100vh !important;
+		margin: 0 auto !important;
     }
 }
 
@@ -145,6 +151,8 @@ footer {
 .question, .quiz-subtitle {
     text-align: center;
     margin: 20px 0;
+	font-size: 1rem;
+    color: #5a5959;
 }
 
 /* Estilo para las opciones */
@@ -152,7 +160,7 @@ footer {
     display: block;
     width: 90%;
     margin: 10px auto;
-    padding: 15px;
+    padding: 10px;
     background: #bb2424;
     color: #fff;
     border: none;
@@ -209,12 +217,19 @@ footer {
     padding: 20px;
     margin: 40px auto;
 }
+#login-container-main {
+	width: 90%;
+    padding: 0px;
+    border-radius: 22px;
+    box-shadow: 0px -1px 0px #127eff;
+}
 
 #login-container h1 {
-    color: #ff0000;
+    color: #3688e2;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
+    font-family: 'Dancing Script';
 }
 
 #login-container p {
@@ -254,7 +269,7 @@ footer {
 }
 
 #loginForm button:hover {
-    background-color: #cc0000;
+    background-color: #194407;
 }
 
 .forgot-password {
@@ -272,7 +287,19 @@ footer {
 .forgot-password a:hover {
     text-decoration: underline;
 }
+
+/* Estilos icono del OJO */
+
 #togglePassword {
 	margin-left: 5px;
-	color: #ff4000;
+	color: #ff0000;
 }
+
+#togglePassword:hover {
+	color: #087918;
+}
+
+.copyright {
+	font-size: 0.7rem;
+}
+	

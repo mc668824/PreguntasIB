@@ -6,7 +6,7 @@ const allQuestions = {
 	/*----------------------------------------------------------------------------------------*/
 	
     battery1: {
-		title: "CARACT. Y CONF.",
+		title: "Características y Configuración",
 		subtitle: "WB A-330/350",
 		questions: [
         {
@@ -963,7 +963,7 @@ const allQuestions = {
 	/*----------------------------------------------------------------------------------------*/
 	
     battery2: {
-		title: "EQ. DE EMERGENCIA",
+		title: "Equipos de Emergéncia",
 		subtitle: "WB A-330/350",
 		questions: [
         {
@@ -1700,7 +1700,7 @@ const allQuestions = {
 	/*----------------------------------------------------------------------------------------*/
 	
     battery3: {
-		title: "PROCED. NORMALES",
+		title: "Procedimientos Normales",
 		subtitle: "WB A-330/350",
 		questions: [
         {
@@ -2349,7 +2349,7 @@ const allQuestions = {
 	/*----------------------------------------------------------------------------------------*/
 	
     battery4: {
-		title: "PROCED. EMERGENCIA",
+		title: "Procedimientos de Emergéncia",
 		subtitle: "WB A-330/350",
 		questions: [
         {
