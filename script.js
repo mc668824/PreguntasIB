@@ -25,7 +25,7 @@ const allQuestions = {
         question: "2. 2.4.2\nHow many lights are displayed on the ACP (AREA CALL PANEL)?",
         options: [
             "A) 3: one amber, one pink and one blue.",
-            "B) 5: two amber, two blue and <u>one red</u>.",
+            "B) 5: two amber, two blue and ONE RED.",
             "C) 2: one red and one amber.",
             "D) 5: two amber, one blue and two red."
         ],
