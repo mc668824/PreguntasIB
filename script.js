@@ -1745,7 +1745,7 @@ const allQuestions = {
             "C) Cabin crew members must remain at the doors.",
             "D) Cabin crew members do not need to be notified of refueling/defueling."
         ],
-        answer: 1
+        answer: 2
     },
     {
         /* Pregunta 5 */
@@ -1767,7 +1767,7 @@ const allQuestions = {
             "C) 11.",
             "D) 12."
         ],
-        answer: 0
+        answer: 3
     },
     {
         /* Pregunta 7 */
@@ -1778,7 +1778,7 @@ const allQuestions = {
             "C) During takeoff and landing and with the seatbelt signs ON.",
             "D) There are only two points in Business class seats."
         ],
-        answer: 2
+        answer: 1
     },
     {
         /* Pregunta 8 */
@@ -1800,7 +1800,7 @@ const allQuestions = {
             "C) Will take the safety pin, will place the lever in an ARMED position and will keep the pin under the plastic cover next to the lever.",
             "D) Will understand it as a final call to be securely seated by using the harness."
         ],
-        answer: 2
+        answer: 1
     },
     {
         /* Pregunta 10 */
@@ -1822,7 +1822,7 @@ const allQuestions = {
             "C) 6.",
             "D) 8."
         ],
-        answer: 2
+        answer: 3
     },
     {
         /* Pregunta 12 */
@@ -1833,7 +1833,7 @@ const allQuestions = {
             "C) Next to the supplementary survival kit, associated to the 4R checklist.",
             "D) Next to the FAK-1, associated to the 4R checklist."
         ],
-        answer: 2
+        answer: 0
     },
     {
         /* Pregunta 13 */
@@ -1855,7 +1855,7 @@ const allQuestions = {
             "C) Just leave it where you found it; the point is to have it on board.",
             "D) Write it down in the Cabin Logbook."
         ],
-        answer: 1
+        answer: 0
     },
     {
         /* Pregunta 15 */
@@ -1866,7 +1866,7 @@ const allQuestions = {
             "C) Cabin crew initiates cabin preparation for landing.",
             "D) Cabin lights will be dimmed."
         ],
-        answer: 1
+        answer: 2
     },
     {
         /* Pregunta 16 */
@@ -1877,7 +1877,7 @@ const allQuestions = {
             "C) In the Cabin Log.",
             "D) In the purser box of the control table."
         ],
-        answer: 2
+        answer: 3
     },
     {
         /* Pregunta 17 */
@@ -1888,7 +1888,7 @@ const allQuestions = {
             "C) Closed until slide arming procedure.",
             "D) It can be anyhow."
         ],
-        answer: 0
+        answer: 1
     },
     {
         /* Pregunta 18 */
@@ -1932,7 +1932,7 @@ const allQuestions = {
             "C) Make sure the slide arming lever is disarmed, slide armed light is off and check outside conditions.",
             "D) Make sure the slide arming lever is disarmed, check outside conditions, cabin pressure visual warning is off, move the door control handle in two steps and check the slide armed light is off, lift the door control handle fully up."
         ],
-        answer: 1
+        answer: 3
     },
     {
         /* Pregunta 22 */
@@ -1998,7 +1998,7 @@ const allQuestions = {
             "C) No hay limitación.",
             "D) En función del destino."
         ],
-        answer: 1
+        answer: 0
     },
     {
         /* Pregunta 28 */
@@ -2009,7 +2009,7 @@ const allQuestions = {
             "C) Ninguno (N/A).",
             "D) Se recomienda que el número no exceda al de los menores no acompañados entre 5 y 12 años."
         ],
-        answer: 0
+        answer: 2
     },
     {
         /* Pregunta 29 */
@@ -2031,7 +2031,7 @@ const allQuestions = {
             "C) La normativa europea obliga exclusivamente a informar al acompañante del SCP e Iberia sigue estas directrices.",
             "D) A través de los TCP, siempre y cuando no hayan sido informados por el personal de tierra."
         ],
-        answer: 0
+        answer: 1
     },
     {
         /* Pregunta 31 */
@@ -2064,7 +2064,7 @@ const allQuestions = {
             "C) Nunca es necesario.",
             "D) A partir de la semana 36 de gestación (32, si es gemelar)."
         ],
-        answer: 0
+        answer: 3
     },
     {
         /* Pregunta 34 */
@@ -2097,7 +2097,7 @@ const allQuestions = {
             "C) Bloquear los baños para impedir su uso.",
             "D) Interrumpir el servicio, sentarnos y hacer uso del atalaje de seguridad completo."
         ],
-        answer: 0
+        answer: 1
     },
     {
         /* Pregunta 37 */
@@ -2141,7 +2141,7 @@ const allQuestions = {
             "C) Debe permanecer abierta.",
             "D) Si hay alerta de bomberos, no es obligatorio que permanezca abierta."
         ],
-        answer: 0
+        answer: 2
     },
     {
         /* Pregunta 41 */
@@ -2163,7 +2163,7 @@ const allQuestions = {
             "C) Tienen que ir dentro de un transportín para animales.",
             "D) No es obligatorio que lleven ningún sistema de retención."
         ],
-        answer: 2
+        answer: 1
     },
     {
         /* Pregunta 43 */
@@ -2174,7 +2174,7 @@ const allQuestions = {
             "C) Se enciende cuando la rampa correspondiente está armada y se lleva hacia arriba la palanca de control. El aviso saltará en cabina de vuelo, que nos informará de que dicha rampa está armada.",
             "D) Está ubicado en el FAP y en cabina de vuelo."
         ],
-        answer: 1
+        answer: 0
     },
     {
         /* Pregunta 44 */
@@ -2196,7 +2196,7 @@ const allQuestions = {
             "C) La puerta de cabina de vuelo deberá permanecer cerrada.",
             "D) La tripulación de vuelo será la mínima requerida."
         ],
-        answer: 1
+        answer: 0
     },
     {
         /* Pregunta 46 */
@@ -2207,7 +2207,7 @@ const allQuestions = {
             "C) Perros de servicio a pasajeros con discapacidad psiquiátrica (SVAN).",
             "D) Dos animales de la misma camada viajando en un mismo contenedor."
         ],
-        answer: 0
+        answer: 1
     },
     {
         /* Pregunta 47 */
@@ -2229,7 +2229,7 @@ const allQuestions = {
             "C) Consumir bebidas alcohólicas durante las 9 horas anteriores a la hora de presentación de un período de imaginaria.",
             "D) Consumir bebidas alcohólicas durante las 9 horas anteriores a la hora de presentación para la actividad aérea."
         ],
-        answer: 3
+        answer: 0
     },
     {
         /* Pregunta 49 */
@@ -2251,7 +2251,7 @@ const allQuestions = {
             "C) Antes del pushback.",
             "D) Antes del aterrizaje."
         ],
-        answer: 1
+        answer: 0
     },
     {
         /* Pregunta 51 */
@@ -2262,7 +2262,7 @@ const allQuestions = {
             "C) 2 % de los pasajeros transportados.",
             "D) 100 % de los pasajeros transportados."
         ],
-        answer: 3
+        answer: 2
     },
     {
         /* Pregunta 52 */
@@ -2273,7 +2273,7 @@ const allQuestions = {
             "C) No es necesaria esta información, puesto que el sobrecargo lo comprueba en el FAP.",
             "D) El sobrecargo realizará una llamada a los diferentes puestos, vía interfono."
         ],
-        answer: 1
+        answer: 0
     },
     {
         /* Pregunta 53 */
@@ -2306,7 +2306,7 @@ const allQuestions = {
             "C) Seatbelts signs on.",
             "D) Passenger briefing performed."
         ],
-        answer: 2
+        answer: 3
     },
     {
         /* Pregunta 56 */
@@ -2317,7 +2317,7 @@ const allQuestions = {
             "C) Cada 20 min.",
             "D) Cada 30 min."
         ],
-        answer: 0
+        answer: 2
     },
     {
         /* Pregunta 57 */
