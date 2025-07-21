@@ -656,7 +656,7 @@ const allQuestions = {
             "C) There is no IFAR system on A330 aircrafts.",
             "D) At door 1."
         ],
-        answer: 2
+        answer: 0
     },
     {
         /* Pregunta 60 */
@@ -847,7 +847,7 @@ const allQuestions = {
     },
     {
         /* Pregunta 77 */
-        question: "77. 2.4.77\nWhere can a passenger perform a call to a cabin crew member from?",
+        question: "77. 2.4.77\nWhere can a passenger perform a call to a cabin crew member from? (3 sitios)",
         options: [
             "A) From PCU (Power Control Unit), PSU (Passenger Service Unit) and LSU (Lavatory Service Unit).",
             "B) From PSU (Passenger Service Unit) and LSU (Lavatory Service Unit).",
